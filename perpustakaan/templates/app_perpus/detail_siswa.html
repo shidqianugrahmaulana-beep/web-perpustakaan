@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -77,4 +78,85 @@
         </div>
     </div>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIPUSTAKA - Detail Profil</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght=400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>body { font-family: 'Inter', sans-serif; }</style>
+</head>
+<body class="bg-[#f4f7fe]">
+    <div class="flex h-screen overflow-hidden">
+        <div class="w-64 bg-[#0b132b] text-white flex flex-col justify-between p-4 flex-shrink-0">
+            <div>
+                <div class="p-2 mt-2">
+                    <p class="text-[10px] uppercase tracking-widest text-gray-400 font-semibold">Sipustaka</p>
+                    <div class="flex items-center space-x-3 mt-1">
+                        <div class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center font-bold text-lg shadow-md">P</div>
+                        <span class="text-sm font-bold leading-tight block">Sistem Peminjaman Buku</span>
+                    </div>
+                </div>
+                <hr class="border-gray-700 my-5 opacity-50">
+                <nav class="space-y-1">
+                    <a href="{% url 'list_siswa' %}" class="flex items-center space-x-3 p-3 bg-[#1c2541] rounded-xl text-white font-medium transition text-sm">
+                        <i class="fa-solid fa-user-gear opacity-80 text-base"></i><span>User</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="flex-1 flex flex-col overflow-y-auto p-10">
+            <div class="mb-4">
+                <a href="{% url 'list_siswa' %}" class="text-gray-400 hover:text-gray-600 flex items-center space-x-2 text-xs font-semibold transition">
+                    <i class="fa-solid fa-arrow-left"></i><span>Kelola User</span>
+                </a>
+            </div>
+
+            <div class="mb-6">
+                <h1 class="text-2xl font-bold text-gray-800">Detail User</h1>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 max-w-2xl space-y-5">
+                <div class="grid grid-cols-2 gap-x-6 gap-y-4 text-xs">
+                    <div class="border-b border-gray-50 pb-2">
+                        <p class="text-gray-400 font-bold uppercase tracking-wider mb-1">ID</p>
+                        <p class="text-sm font-bold text-gray-800">{{ siswa.id }}</p>
+                    </div>
+                    <div class="border-b border-gray-50 pb-2">
+                        <p class="text-gray-400 font-bold uppercase tracking-wider mb-1">Nama</p>
+                        <p class="text-sm font-bold text-gray-800">{{ siswa.nama }}</p>
+                    </div>
+                    <div class="border-b border-gray-50 pb-2">
+                        <p class="text-gray-400 font-bold uppercase tracking-wider mb-1">Kelas</p>
+                        <p class="text-sm font-bold text-gray-800">{{ siswa.kelas }}</p>
+                    </div>
+                    <div class="border-b border-gray-50 pb-2">
+                        <p class="text-gray-400 font-bold uppercase tracking-wider mb-1">NIS</p>
+                        <p class="text-sm font-bold text-gray-800">{{ siswa.nis }}</p>
+                    </div>
+                    <div class="border-b border-gray-50 pb-2">
+                        <p class="text-gray-400 font-bold uppercase tracking-wider mb-1">Status</p>
+                        <span class="inline-block mt-1 px-2.5 py-0.5 text-[11px] font-bold rounded-full bg-emerald-50 text-emerald-600 border border-emerald-100">{{ siswa.status }}</span>
+                    </div>
+                    <div class="border-b border-gray-50 pb-2">
+                        <p class="text-gray-400 font-bold uppercase tracking-wider mb-1">Total Buku Dipinjam</p>
+                        <p class="text-sm font-bold text-blue-600"><i class="fa-solid fa-book-bookmark mr-1"></i>{{ total_pinjam }} Buku</p>
+                    </div>
+                </div>
+
+                <div class="flex justify-end pt-2">
+                    <a href="{% url 'list_siswa' %}" class="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold rounded-xl shadow-sm transition">
+                        Kembali Ke Tabel
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+>>>>>>> c3b90f2132341348918c3e24a51488723f093317
 </html>
